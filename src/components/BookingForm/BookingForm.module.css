@@ -1,0 +1,77 @@
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin: 0 auto;
+  height: 440px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 1px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.formInput,
+.formSelect {
+  font-family: 'Karla', sans-serif;
+  height: 40px;
+  padding: 0px 0px 0px 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 14px 15px;
+  border: none;
+  cursor: pointer;
+  min-height: auto;
+  min-width: auto;
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  height: 40px;
+  margin-top: 1em;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: #f4ce14;
+  color: #495e57;
+  transition-property: background-color, color, transform, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.formButton:hover {
+  cursor: pointer;
+  background-color: #495e57;
+  color: #f4ce14;
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.formButton:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+  box-shadow: none;
+  transform: none;
+}

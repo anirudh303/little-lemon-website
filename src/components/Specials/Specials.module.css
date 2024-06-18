@@ -1,0 +1,180 @@
+.specials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.specials-head {
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.specials-head button {
+  margin-right: 2.8em;
+
+  background-color: #f4ce14;
+  color: #000;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  width: 12em;
+  height: 3em;
+  margin-top: 2em;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: #f4ce14;
+  color: #495e57;
+
+  transition-property: background-color, color, transform, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.specials-head button:hover {
+  cursor: pointer;
+  background-color: #495e57;
+  color: #f4ce14;
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 599px) {
+  .specials button {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+.card-img-top {
+  width: 95%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  margin-bottom: -0.2em;
+  box-shadow: 5px 10px 20px #ccc;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  padding: 2em;
+  margin-top: 2em;
+  width: 26rem;
+}
+
+.cards {
+  display: flex;
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 3em;
+  margin-top: -2em;
+}
+
+.card-body {
+  font-family: 'Karla', sans-serif;
+  background-color: #f2efef;
+  margin-right: 1em;
+  padding: 1em;
+  line-height: 1.8em;
+  height: 250px;
+  box-shadow: 5px 10px 20px #ccc;
+}
+
+.card-text {
+  height: 110px;
+}
+
+.delivery_button {
+  margin-top: 1em;
+  margin-right: 0.5em;
+}
+
+.delivery_button:hover {
+  cursor: pointer;
+}
+
+.delivery_button:hover + .fa-motorcycle {
+  animation: moveIcon 500ms ease forwards;
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+
+.delivery_button:active + .fa-motorcycle {
+  animation: moveBackIcon 500ms ease forwards;
+}
+
+@keyframes moveBackIcon {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 700px) {
+  .card-body {
+    height: 300px;
+  }
+}
+
+.btn.btn-primary {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  border: none;
+}
+
+.title {
+  width: 30%;
+  height: auto;
+  margin-right: 8em;
+}
+
+.title-button {
+  width: 50%;
+  height: auto;
+  margin-top: 10.5em;
+  margin-left: 15em;
+}
+
+.specials-head h3 {
+  font-family: 'Markazi Text', sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+.card-title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title-price .price {
+  font-family: 'Markazi Text', sans-serif;
+  color: #ee9972;
+  font-size: 24px;
+}
+
+.card-title-price .card-title {
+  font-family: 'Markazi Text', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+}

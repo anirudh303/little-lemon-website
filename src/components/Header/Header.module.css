@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 300px;
+  height: auto;
+  transition: width 0.3s ease; 
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+}
+
+.navList li {
+  margin: 0 10px;
+}
+
+.navList a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.active {
+  color: #f4ce14;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 1em; 
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modalNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalNavList {
+  list-style: none;
+  padding: 0;
+}
+
+.modalNavList li {
+  margin: 15px 0;
+}
+
+.modalNavList a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+}
+
+@media (max-width: 980px) {
+  .navList {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: 1em; 
+  }
+
+  .logo img {
+    width: 50%; 
+  }
+}
+
+@media (max-width: 600px) {
+  .logo img {
+    width: 40%;
+  }
+}

@@ -1,0 +1,102 @@
+.footer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  border-top: 10px groove #495e57;
+}
+
+.footer a {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+  transition: margin-left 0.3s ease, color 0.3s ease;
+}
+
+.footer a:hover {
+  margin-left: 5px;
+  color: #f4ce14;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+.footer img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .footer img {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.logo {
+  width: 20%;
+  margin-right: 2em;
+  display: flex;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  width: 54%;
+}
+
+@media (max-width: 800px) {
+  .data {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    justify-content: center;
+  }
+}
+
+.links,
+.contact,
+.social {
+  width: 20%;
+  margin: 1em;
+  margin-top: 7em;
+}
+
+.links ul,
+.contact ul,
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li,
+.contact ul li,
+.social ul li {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .logo,
+  .links,
+  .contact,
+  .social {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .logo {
+    margin: 10px;
+  }
+}
+
+.footer li {
+  margin: 0.1em;
+}
