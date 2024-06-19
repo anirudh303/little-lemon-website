@@ -23,13 +23,6 @@ function Hero() {
           </button>
         </Link>
       </div>
-      {/* <div className=" z- m-8 p-2">
-        <img
-          src={HeroImage}
-          alt="Delicious Mediterranean food"
-          className="w-[500px] h-[420px] rounded-lg shadow-lg transform transition duration-300 hover:scale-105 "
-        />
-      </div> */}
     </section>
   );
 }

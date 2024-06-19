@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function Menu() {
   return (
     <main>
-      <h1 style={{ textAlign: 'center' }}>Under Construction</h1>
+      <h1 style={{ textAlign: "center" }}>Under Construction</h1>
     </main>
   );
 }

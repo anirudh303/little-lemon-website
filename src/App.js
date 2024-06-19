@@ -7,8 +7,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Menu from "./components/pages/Menu";
 import BookingForm from "./components/BookingForm/BookingForm";
-import OrderOnline from "./components/pages/OrderOnline";
-import Login from "./components/pages/Login";
+
 import NotFound from "./components/pages/NotFound";
 import ConfirmedBooking from "./components/pages/ConfirmedBooking";
 
@@ -83,8 +82,7 @@ function App() {
             />
           }
         />
-        <Route path="/order-online" element={<OrderOnline />} />
-        <Route path="/login" element={<Login />} />
+
         <Route path="/confirmedbooking" element={<ConfirmedBooking />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

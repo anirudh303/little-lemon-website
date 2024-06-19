@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from '../../assets/Icons/Logo.svg';
-import { Link } from 'react-router-dom';
-import styles from './Footer.module.css';
+import React from "react";
+import logo from "../../assets/Icons/Logo.svg";
+import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
@@ -31,16 +31,6 @@ function Footer() {
             <li>
               <Link to="/reservations" className={styles.link}>
                 Reservations
-              </Link>
-            </li>
-            <li>
-              <Link to="/order-online" className={styles.link}>
-                Order Online
-              </Link>
-            </li>
-            <li>
-              <Link to="/login" className={styles.link}>
-                Login
               </Link>
             </li>
           </ul>

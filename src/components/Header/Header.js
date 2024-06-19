@@ -1,177 +1,44 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from '../../assets/Icons/Logo.png';
-import styles from './Header.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/Icons/Logo.png";
 
 function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // Array storing navigation links and corresponding labels
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/menu", label: "Menu" },
+    { path: "/reservations", label: "Reservations" },
+    { path: "/login", label: "Login" },
+  ];
 
   return (
-    <header className={styles.header}>
-      <a href="/" className={styles.logo}>
-        <img src={logo} alt="Logo" />
+    <header className="flex justify-between items-center w-full">
+      <a href="/" className="flex">
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-72 h-auto transition-width duration-300 ease-in-out"
+        />
       </a>
-      <nav className={styles.navigation}>
-        <ul className={styles.navList}>
-          <li>
-            <NavLink
-              exact
-              to="/"
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.navLink
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.navLink
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/menu"
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.navLink
-              }
-            >
-              Menu
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/reservations"
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.navLink
-              }
-            >
-              Reservations
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/order-online"
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.navLink
-              }
-            >
-              Order Online
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.navLink
-              }
-            >
-              Login
-            </NavLink>
-          </li>
+      <nav className="flex items-center ">
+        <ul className="flex list-none">
+          {navLinks.map((link, index) => (
+            <li key={index} className="mx-2.5">
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-black text-xl font-bold underline p-1"
+                    : "text-gray-800 text-xl  no-underline"
+                }
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
-      <div className={styles.hamburger} onClick={openModal}>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-      </div>
-      {isModalOpen && (
-        <div className={styles.modalOverlay} onClick={closeModal}>
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className={styles.closeButton} onClick={closeModal}>
-              &times;
-            </button>
-            <nav className={styles.modalNavigation}>
-              <ul className={styles.modalNavList}>
-                <li>
-                  <NavLink
-                    exact
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? styles.active : styles.navLink
-                    }
-                    onClick={closeModal}
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/about"
-                    className={({ isActive }) =>
-                      isActive ? styles.active : styles.navLink
-                    }
-                    onClick={closeModal}
-                  >
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/menu"
-                    className={({ isActive }) =>
-                      isActive ? styles.active : styles.navLink
-                    }
-                    onClick={closeModal}
-                  >
-                    Menu
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/reservations"
-                    className={({ isActive }) =>
-                      isActive ? styles.active : styles.navLink
-                    }
-                    onClick={closeModal}
-                  >
-                    Reservations
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/order-online"
-                    className={({ isActive }) =>
-                      isActive ? styles.active : styles.navLink
-                    }
-                    onClick={closeModal}
-                  >
-                    Order Online
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/login"
-                    className={({ isActive }) =>
-                      isActive ? styles.active : styles.navLink
-                    }
-                    onClick={closeModal}
-                  >
-                    Login
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
