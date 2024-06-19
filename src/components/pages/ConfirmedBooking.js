@@ -1,5 +1,5 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import { useLocation } from "react-router-dom";
 import {
   ChakraProvider,
   Box,
@@ -10,7 +10,7 @@ import {
   Card,
   CardBody,
   Divider,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 export default function ConfirmedBooking() {
   const location = useLocation();

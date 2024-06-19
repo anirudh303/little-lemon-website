@@ -2,7 +2,7 @@
 
 ## Description
 
-This website serves as the digital front for Little Lemon Restaurant. It was crafted during a capstone project for the META Frontend Developer course. The design is modern, offering a platform for visitors to check out the menu and book tables effortlessly.
+This website serves as the digital front for Little Lemon Restaurant. It was crafted during a capstone project for the META Frontend Developer course. The design is modern, offering a platform for visitors to check out the menu and book tables effortlessly.I've used React Js,Tailwind CSS, Chakra UI,Yup and Formik to make this project.
 
 ## Features
 

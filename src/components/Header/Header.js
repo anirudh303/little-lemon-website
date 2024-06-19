@@ -6,10 +6,8 @@ function Header() {
   // Array storing navigation links and corresponding labels
   const navLinks = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
     { path: "/menu", label: "Menu" },
     { path: "/reservations", label: "Reservations" },
-    { path: "/login", label: "Login" },
   ];
 
   return (
@@ -21,7 +19,7 @@ function Header() {
           className="w-72 h-auto transition-width duration-300 ease-in-out"
         />
       </a>
-      <nav className="flex items-center ">
+      <nav className="flex items-center  mr-4">
         <ul className="flex list-none">
           {navLinks.map((link, index) => (
             <li key={index} className="mx-2.5">

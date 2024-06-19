@@ -56,7 +56,7 @@ const FooterSection = ({ title, links, isReactRouterLink = false }) => (
 
 function Footer() {
   return (
-    <footer className="flex  w-full justify-start md:justify-center md:text-center p-12 bg-[#F3F7EC] text-[#495e57]">
+    <footer className="flex mt-20 w-full justify-start md:justify-center md:text-center p-12 bg-[#F3F7EC] text-[#495e57]">
       <div className="w-1/5 flex justify-center md:mr-8">
         <img src={logo} alt="Secondary Logo" className="w-full md:w-auto" />
       </div>

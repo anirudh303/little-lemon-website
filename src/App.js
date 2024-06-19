@@ -10,6 +10,7 @@ import BookingForm from "./components/BookingForm/BookingForm";
 
 import NotFound from "./components/pages/NotFound";
 import ConfirmedBooking from "./components/pages/ConfirmedBooking";
+import Reservations from "./components/pages/Reservations";
 
 export const initializeTimes = () => {
   const today = new Date();
@@ -64,24 +65,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/menu" element={<Menu />} />
-        <Route
-          path="/reservations"
-          element={
-            <BookingForm
-              availableTimes={availableTimes}
-              dispatch={dispatch}
-              date={date}
-              time={time}
-              guests={guests}
-              occasion={occasion}
-              handleDateChange={handleDateChange}
-              handleTimeChange={handleTimeChange}
-              handleGuestsChange={handleGuestsChange}
-              handleOccasionChange={handleOccasionChange}
-              handleSubmit={submitForm}
-            />
-          }
-        />
+        <Route path="/reservations" element={<Reservations />} />
 
         <Route path="/confirmedbooking" element={<ConfirmedBooking />} />
         <Route path="*" element={<NotFound />} />

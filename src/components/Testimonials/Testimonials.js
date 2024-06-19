@@ -32,7 +32,7 @@ function Testimonials() {
   return (
     <section className="flex flex-col items-center  w-full shadow-lg shadow-t-xl overflow-x-scroll">
       <hr className="w-4/5"></hr>
-      <div className="flex flex-col justify-center items-center w-full  text-center p-4">
+      <div className="flex flex-col justify-center items-center w-full mt-6  text-center p-4">
         <h1 className="text-5xl font-serif font-bold text-[#495e57]   w-full">
           What Our Customers Say
         </h1>
